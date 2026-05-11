@@ -105,6 +105,10 @@ nav {
 section {
     padding: 5rem 10%;
 }
+section, footer {
+    padding: 5rem 10%;
+    scroll-margin-top: 80px; /* This creates the natural gap! */
+}
 
 /* Hero Section */
 #hero {

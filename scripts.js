@@ -9,13 +9,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// SCROLL REVEAL (Intersection Observer) 
+// SCROLL REVEAL
 const revealElements = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            observer.unobserve(entry.target); // Only reveal once
+            observer.unobserve(entry.target); 
         }
     });
 }, { threshold: 0.15 });
@@ -55,7 +55,11 @@ document.querySelectorAll('.modal-btn').forEach(btn => {
             modalTitle.innerText = data.title;
             modalBody.innerHTML = data.content;
             modal.style.display = 'flex';
-            setTimeout(() => modal.classList.add('show'), 10); // Small delay for transition
+            
+            // LOCK THE BACKGROUND SCROLL
+            document.body.style.overflow = 'hidden'; 
+            
+            setTimeout(() => modal.classList.add('show'), 10); 
         }
     });
 });
@@ -67,6 +71,10 @@ window.addEventListener('click', (e) => {
 
 function closeModal() {
     modal.classList.remove('show');
+    
+    // UNLOCK THE BACKGROUND SCROLL
+    document.body.style.overflow = ''; 
+    
     setTimeout(() => modal.style.display = 'none', 300);
 }
 
@@ -121,7 +129,7 @@ function init() {
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 1) - 0.5;
         let directionY = (Math.random() * 1) - 0.5;
-        let color = '#00f0ff'; // Neon Cyan
+        let color = '#00f0ff'; 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
     }
 }
@@ -154,6 +162,36 @@ function connect() {
         }
     }
 }
+// ACTIVE NAVIGATION HIGHLIGHTING (SCROLL SPY)
+const sections = document.querySelectorAll("section, header, footer"); // Added footer here!
+const navLi = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        // If the user has scrolled past one-third of the section
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    // Failsafe: If we are at the very bottom of the page, force "contact" to be active
+    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight - 10) {
+        current = "contact";
+    }
+
+    navLi.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+
 
 window.addEventListener('resize', function() {
     canvas.width = innerWidth;
