@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Physics Escape - Final Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="game-wrapper">
+        <canvas id="myCanvas" width="800" height="600"></canvas>
+
+        <div id="menu-container">
+            
+            <div id="main-menu" class="overlay">
+                <h1 class="neon-text">NEON ESCAPE</h1>
+                <p class="pulse">PRESS PLAY TO BEGIN</p>
+                <button id="start-btn" class="menu-btn">PLAY</button>
+            </div>
+
+            <div id="game-ui" style="display: none;">
+                <div class="hud-item">TIME: <span id="time-val">0.0</span>s</div>
+                <div class="hud-item">SCORE: <span id="score-val">0</span></div>
+            </div>
+
+            <div id="pause-menu" class="overlay" style="display: none;">
+                
+                <h2 class="neon-text-blue">PAUSED</h2>
+                <div style="margin-bottom: 30px;">
+                 <label id="volume-label" for="volume-slider">MUSIC VOLUME</label><br>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.4">
+                </div>
+                <button id="resume-btn" class="menu-btn">RESUME</button>
+                <button id="quit-btn" class="menu-btn">QUIT</button>
+            </div>
+
+            <div id="win-menu" class="overlay" style="display: none;">
+                <h1 class="neon-text">YOU WIN!</h1>
+                <h2 class="neon-text-blue">ESCAPE COMPLETE</h2>
+                
+                <h3 class="neon-text-blue" id="final-stats" style="font-size: 18px; margin-bottom: 30px; line-height: 1.5; text-align: center;"></h3>
+                
+                <button id="restart-btn" class="menu-btn">PLAY AGAIN</button>
+            </div>
+
+            <div id="inventory-ui">
+                <div id="slot-1" class="slot"><span class="key">1</span><div class="label">EMPTY</div><div class="timer"></div></div>
+                <div id="slot-2" class="slot"><span class="key">2</span><div class="label">EMPTY</div><div class="timer"></div></div>
+                <div id="slot-3" class="slot"><span class="key">3</span><div class="label">EMPTY</div><div class="timer"></div></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scripts/Box2D.js"></script>
+
+    <script src="scripts/utils_math.js"></script>
+    <script src="scripts/utils_classes.js"></script>
+    
+    <script src="scripts/renderer.js"></script>
+    <script src="scripts/input.js"></script>
+    <script src="scripts/audioplayer.js"></script>
+    <script src="scripts/particlesystem.js"></script>
+    <script src="scripts/htmlmenu.js"></script>
+
+    <script src="scripts/game.js"></script>
+    <script src="scripts/gameobjects.js"></script>
+
+    <script src="scripts/box2d_helper.js"></script>
+    <script src="scripts/box2d_game.js"></script>
+    <script src="scripts/box2d_gameobjects.js"></script>
+
+    <script src="scripts/main.js"></script>
+    <script src="Player.js"></script>
+    <script src="NeonEscape.js"></script>
+
+    
+</body>
+</html>

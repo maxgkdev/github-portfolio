@@ -1,0 +1,59 @@
+{
+  "platforms": [
+    { "x": 200, "y": 450, "width": 400, "height": 20, "color": "#00f3ff" },
+    { "x": 750, "y": 450, "width": 400, "height": 20, "color": "#ff00ff" },
+    { "x": 1150, "y": 400, "width": 300, "height": 20, "color": "#00f3ff" },
+    
+    { "x": 1600, "y": 400, "width": 150, "height": 20, "color": "#ffff00", "moveX": 0, "moveY": 150, "speed": 2 },
+    { "x": 1900, "y": 250, "width": 300, "height": 20, "color": "#00f3ff" },
+    { "x": 2400, "y": 250, "width": 150, "height": 20, "color": "#ff00ff", "moveX": 200, "moveY": 0, "speed": 1.5 },
+    
+    { "x": 3000, "y": 350, "width": 500, "height": 20, "color": "#00f3ff" },
+    { "x": 3600, "y": 450, "width": 300, "height": 20, "color": "#ff00ff" },
+    
+    { "x": 4100, "y": 450, "width": 150, "height": 20, "color": "#ffff00", "moveX": 0, "moveY": -200, "speed": 2.5 },
+    { "x": 4400, "y": 150, "width": 300, "height": 20, "color": "#00f3ff" },
+    { "x": 4900, "y": 150, "width": 150, "height": 20, "color": "#ff00ff", "moveX": 0, "moveY": 250, "speed": 1.2 },
+    { "x": 5400, "y": 450, "width": 800, "height": 20, "color": "#00f3ff" },
+    
+    { "x": 6000, "y": 400, "width": 150, "height": 20, "color": "#ffff00", "moveX": 150, "moveY": 100, "speed": 1 },
+    { "x": 6350, "y": 300, "width": 150, "height": 20, "color": "#ffff00", "moveX": 0, "moveY": -150, "speed": 1.5 },
+    { "x": 6650, "y": 200, "width": 200, "height": 20, "color": "#00f3ff" },
+    
+    { "x": 7000, "y": 300, "width": 150, "height": 20, "color": "#ffff00", "moveX": 150, "moveY": 0, "speed": 2 },
+    { "x": 7400, "y": 350, "width": 400, "height": 20, "color": "#ff00ff" },
+    
+    { "x": 8000, "y": 350, "width": 150, "height": 20, "color": "#ffff00", "moveX": 0, "moveY": 200, "speed": 1.5 },
+    { "x": 8300, "y": 200, "width": 200, "height": 20, "color": "#00f3ff" },
+    { "x": 8600, "y": 200, "width": 150, "height": 20, "color": "#ff00ff", "moveX": 120, "moveY": 0, "speed": 2 },
+    { "x": 9000, "y": 200, "width": 200, "height": 20, "color": "#00f3ff" },
+    
+    { "x": 9300, "y": 400, "width": 150, "height": 20, "color": "#ffff00", "moveX": 0, "moveY": -100, "speed": 3 },
+    { "x": 9600, "y": 450, "width": 600, "height": 20, "color": "#00f3ff" },
+    
+    { "x": 10300, "y": 400, "width": 400, "height": 40, "color": "#08ff10", "isGoal": true }
+  ],
+  "enemies": [
+    { "x": 750, "y": 420, "patrolWidth": 300, "speed": 100 },
+    { "x": 1150, "y": 370, "patrolWidth": 200, "speed": 150 },
+    { "x": 1900, "y": 220, "patrolWidth": 250, "speed": 180 },
+    { "x": 3000, "y": 320, "patrolWidth": 450, "speed": 250 },
+    { "x": 3000, "y": 320, "patrolWidth": 450, "speed": 200 },
+    { "x": 5400, "y": 420, "patrolWidth": 400, "speed": 150 },
+    { "x": 5500, "y": 420, "patrolWidth": 400, "speed": 250 },
+    { "x": 5500, "y": 420, "patrolWidth": 350, "speed": 300 },
+    { "x": 7400, "y": 320, "patrolWidth": 300, "speed": 200 },
+    { "x": 9500, "y": 420, "patrolWidth": 300, "speed": 100 },
+    { "x": 9700, "y": 420, "patrolWidth": 300, "speed": 150 }
+  ],
+  "powerups": [
+    { "x": 300, "y": 380, "type": "doubleJump" },
+    { "x": 900, "y": 280, "type": "gun" },
+    { "x": 2000, "y": 200, "type": "invincibility" },
+    { "x": 3600, "y": 400, "type": "doubleJump" },
+    { "x": 4400, "y": 100, "type": "gun" },
+    { "x": 5400, "y": 400, "type": "invincibility" },
+    { "x": 7400, "y": 250, "type": "doubleJump" },
+    { "x": 8300, "y": 150, "type": "gun" }
+  ]
+}
