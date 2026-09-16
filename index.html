@@ -1,95 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max González Koop | Game Developer</title>
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max González Koop | Cloud Solutions Architect</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">MGK.</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">Max González Koop</div>
+      <ul class="nav-links">
+        <li><a href="#featured">Architecture</a></li>
+        <li><a href="#history">Background</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="mailto:maxgonzalezkoop@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <header id="hero">
-        <canvas id="bg-canvas"></canvas> <div class="hero-content">
-            <h1>Max González Koop</h1>
-            <h2>Gameplay Programmer & Game Developer</h2>
-            <a href="#projects" class="btn">View My Work</a>
+  <main>
+    <header id="hero">
+      <div class="hero-container">
+        <h1 class="animate-load delay-1">Architecting Cloud.<br>Engineering Systems.</h1>
+        <p class="subtitle animate-load delay-2">
+          AWS Certified Solutions Architect (SAA) candidate. I build highly scalable, serverless backend infrastructure, backed by a foundation in low-level game engine programming.
+        </p>
+        <div class="btn-group animate-load delay-3">
+          <a href="#featured" class="btn btn-primary">View Cloud Architecture</a>
+          <a href="https://github.com/maxgkdev" target="_blank" class="btn btn-secondary">GitHub</a>
         </div>
+      </div>
     </header>
 
-    <section id="about" class="reveal">
-        <h2>About Me</h2>
-        <p>I am a third-year undergraduate student in Game Design and Development at UDIT in Madrid, eager to secure work and internship opportunities to develop relevant skills on the pathway to becoming a professional game developer.</p>
-        <p>Currently, I am working as an Assistant Programmer and Customer Service at Virtual Zone Madrid.</p>
-    </section>
-
-    <section id="projects" class="reveal">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
+    <!-- PRIMARY FOCUS: AWS ARCHITECTURE -->
+    <section id="featured" class="section-padding">
+      <div class="section-container">
+        <h2 class="section-title scroll-reveal">Featured Infrastructure</h2>
+        
+        <div class="featured-card scroll-reveal">
+          <div class="featured-content">
+            <span class="eyebrow">Serverless PWA</span>
+            <h3>Recipe Keeper & AI Extractor</h3>
+            <p>I migrated a standalone frontend application into a fully serverless AWS environment. The infrastructure is provisioned entirely via <strong>Terraform (IaC)</strong> for reproducible, terminal-driven deployments.</p>
             
-           <div class="project-card">
-                <h3>Neon Escape</h3>
-                <p>A 2D action-platformer featuring custom physics, an advanced state machine, and JSON-driven level design.</p>
-                <div class="tags">
-                    <span>JavaScript</span> <span>HTML5 Canvas</span> <span>CSS3</span>
-                </div>
-                <button class="btn modal-btn" data-project="neon-escape">View Case Study</button>
-                <a href="projects/neon-escapes/index.html" class="btn outline" target="_blank">Play in Browser</a>
-            </div>
+            <ul class="feature-list">
+              <li><strong>API Gateway & Lambda (Node.js):</strong> Bypassed frontend CORS restrictions for reliable web scraping.</li>
+              <li><strong>AI Integration:</strong> Securely integrated Google Gemini for photo-to-text extraction, locking API keys inside AWS Secrets Manager.</li>
+              <li><strong>AWS Cognito:</strong> Implemented JWT authentication to isolate guest users (like recruiters) from synchronized family cookbooks.</li>
+              <li><strong>DynamoDB & S3:</strong> Partitioned user data at scale, paired with private buckets for image storage.</li>
+              <li><strong>Global Delivery:</strong> Distributed the PWA via Amazon CloudFront with offline Service Worker support.</li>
+            </ul>
 
-            <div class="project-card">
-                <h3>Lumkee</h3>
-                <p>A collaborative game development project. Click below to view the project details and download it on itch.io.</p>
-                <div class="tags">
-                    <span>Game Dev</span> <span>Collaboration</span> <span></span>
-                </div>
-                <a href="https://hasusstudio.itch.io/lumkee" class="btn outline" target="_blank">View on Itch.io</a>
+            <div class="tags">
+              <span class="tag">AWS Serverless</span>
+              <span class="tag">Terraform (IaC)</span>
+              <span class="tag">DynamoDB</span>
+              <span class="tag">Cognito</span>
             </div>
-
+            
+            <div class="card-actions">
+              <a href="https://d2tjksce0qbw7r.cloudfront.net/" target="_blank" class="btn btn-primary">Live Demo</a>
+              <a href="https://github.com/maxgkdev/recipe-keeper-aws-serverless" target="_blank" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="skills" class="reveal">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <p>C#, C++, Blueprints, HTML, CSS, JavaScript</p>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Engines</h3>
-                <p>Unity, Unreal Engine, GitHub, Visual Studio, VS Code</p>
-            </div>
+    <!-- SECONDARY FOCUS: GAME DEV HISTORY -->
+    <section id="history" class="section-padding bg-alt">
+      <div class="section-container">
+        <div class="section-header scroll-reveal">
+          <h2 class="section-title" style="margin-bottom: 1rem;">Engineering Background</h2>
+          <p class="subtitle" style="text-align: center; font-size: 1.1rem; margin-bottom: 3rem;">
+            Before architecting cloud infrastructure, I built a solid foundation in software engineering through game development. These featured projects are selections from my broader history of building low-level systems, custom physics, and interactive mechanics.
         </div>
+        
+        <div class="projects-grid">
+          
+              <!-- Neon Escape -->
+        <div class="card scroll-reveal">
+        <div class="card-content">
+            <span class="eyebrow">2D Systems & Physics</span>
+        <h3>Neon Escape</h3>
+        <p>
+             A 2D action-platformer developed using vanilla JavaScript, CSS, and a custom engine framework (<code>HTML5_Engine</code>). Engineered custom player physics and state machine animations, pairing them with an asynchronous JSON pipeline to dynamically parse and instantiate level geometry, power-up entities, and enemy behaviors.
+        </p>
+        <div class="tags">
+            <span class="tag">Vanilla JS</span>
+            <span class="tag">HTML5_Engine</span>
+            <span class="tag">JSON Pipeline</span>
+            <span class="tag">Canvas API</span>
+        </div>
+        </div>
+        <div class="card-footer flex-footer">
+            <a href="projects/neon-escapes/index.html" target="_blank" class="btn btn-primary btn-sm">Play in Browser</a>
+        </div>
+        </div>
+
+          <!-- Lumkee -->
+          <div class="card scroll-reveal delay-1">
+            <div class="card-content">
+              <span class="eyebrow">Collaborative Game Dev</span>
+              <h3>Lumkee</h3>
+              <p>A collaborative game development project where I was responsible for engineering core gameplay mechanics. I implemented the interactive item systems, coin collection logic, and the custom player HUD.</p>
+            </div>
+            <div class="card-footer flex-footer">
+              <a href="https://hasusstudio.itch.io/lumkee" target="_blank" class="btn btn-secondary btn-sm">View on Itch.io</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2 id="modal-title">Project Title</h2>
-            <div class="modal-body" id="modal-body">
-                </div>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section-padding">
+      <div class="section-container">
+        <h2 class="section-title scroll-reveal">Technical Arsenal</h2>
+        
+        <div class="skills-grid">
+          <div class="skill-column scroll-reveal">
+            <h3>Cloud & Architecture</h3>
+            <ul>
+              <li>AWS (Lambda, API Gateway, S3)</li>
+              <li>Infrastructure as Code (Terraform)</li>
+              <li>Identity & Access (Cognito, IAM)</li>
+              <li>Databases (DynamoDB)</li>
+            </ul>
+          </div>
+          
+          <div class="skill-column scroll-reveal delay-1">
+            <h3>Software Engineering</h3>
+            <ul>
+              <li>Node.js & JavaScript (ES6+)</li>
+              <li>C# & C++</li>
+              <li>Object-Oriented Programming</li>
+              <li>Git & CI/CD Pipelines</li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Max González Koop. Designed for scale.</p>
+      <div class="social-links">
+        <a href="https://github.com/maxgkdev" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/max-gonzalez-koop-64b515263/" target="_blank">LinkedIn</a>
+      </div>
     </div>
+  </footer>
 
-    <footer id="contact">
-        <h2>Let's Connect</h2>
-        <a href="mailto:maxgonzalezkoop@gmail.com" class="btn">Email Me</a>
-        <div class="social-links">
-            <a href="https://github.com/maxgkdev" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/max-gonzalez-koop-64b515263/" target="_blank">LinkedIn</a>
-        </div>
-        <p class="copyright">© 2026 Max González Koop</p>
-    </footer>
-<script src="scripts.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
